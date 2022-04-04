@@ -1,0 +1,1144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s ease;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #2b4eff;
+    --grey: #eee;
+    --text: #0e1133;
+    --white: #fff;
+    --black: #000;
+    --red: #f2277e;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+
+/* header start  */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
+header .contanier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+
+header .contanier .left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .contanier .left .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .contanier .left .logo img {
+    max-width: 150px;
+}
+
+header .contanier .left .category {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+header .contanier .left .category a {
+    font-size: 25px;
+    color: var(--text);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .contanier .links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .contanier nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .contanier nav div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+header .contanier nav div a {
+    font-size: 20px;
+    color: var(--text);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .contanier nav div a i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+header .contanier nav div ul {
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    background-color: var(--white);
+    transform: translateY(15px);
+    display: none;
+
+}
+
+header .contanier nav div:hover ul {
+    transform: translateY(0);
+    display: block;
+}
+
+header .contanier nav div ul li:not(:last-of-type) {
+    border-bottom: 2px solid #ddd;
+}
+
+header .contanier nav div ul li:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+header .contanier nav div ul li:hover a {
+    color: var(--white);
+}
+
+header .contanier nav div ul li a {
+    padding: 20px;
+    color: var(--black);
+}
+
+/* home section end */
+
+/* section home start  */
+.menu {
+    display: none;
+    font-size: 40px;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.home {
+    background-color: var(--grey);
+    height: 90vh;
+    padding-top: 250px;
+    position: relative;
+}
+
+.home>img:first-of-type {
+    position: absolute;
+    top: 60%;
+    animation: move-up-down1 4s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+.home>img:nth-of-type(2) {
+    position: absolute;
+    top: 60%;
+    right: 0;
+
+}
+
+.home>img:last-of-type {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    animation: circle 4s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+.home .contanier {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.home .contanier .text h2 {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.home .contanier .text h1 {
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.home .contanier .text h1 span {
+    background-image: url(../images/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    z-index: 1000;
+    background-size: 0% 0%;
+    animation: text-image 3s ease-in-out infinite;
+}
+
+.home .contanier .text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.home .contanier .text a {
+    display: block;
+    font-size: 20px;
+    background-color: var(--blue);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.home .contanier .text a:hover {
+    box-shadow: var(--blue) 0px 7px 36px 0px;
+}
+
+.home .contanier .photos {
+    display: flex;
+    height: 400px;
+    position: relative;
+}
+
+.home .contanier .photos .left {
+    flex-basis: 70%;
+    height: 100%;
+    position: relative;
+}
+
+.home .contanier .photos .left img:first-of-type {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+.home .contanier .photos .left img:last-of-type {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -31px;
+    animation: move-up-down1 4s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+.home .contanier .photos .right {
+    flex-basis: 30%;
+    position: relative;
+}
+
+.home .contanier .photos .right img:first-of-type {
+    width: 155px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    border-top-right-radius: 50px;
+    z-index: 2;
+}
+
+.home .contanier .photos .right img:nth-last-of-type(2) {
+    position: absolute;
+    top: 34%;
+    left: 0;
+    transform: translateX(-145px);
+}
+
+.home .contanier .photos .right img:last-of-type {
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.home .contanier .photos .text {
+    z-index: 10;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    top: 68%;
+    left: 40%;
+    padding: 20px;
+    width: fit-content;
+    animation: move-up-down2 4s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+.home .contanier .photos .text p {
+    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+/* section home end  */
+
+/* section explore start  */
+.explore {
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+.explore .contanier .ex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.explore .contanier .ex h1 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.explore .contanier .ex h1 span {
+    background-image: url(../images/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    z-index: 1000;
+    background-size: 0% 0%;
+    animation: text-image 3s ease-in-out infinite;
+}
+
+.explore .contanier .ex a,
+.event .contanier .card .content a {
+    color: var(--text);
+}
+
+.explore .contanier .ex a:hover,
+.event .contanier .card .content a:hover {
+    color: var(--blue);
+}
+
+.explore .contanier .ex a:hover i,
+.event .contanier .card .content a:hover i {
+    transform: translateX(8px);
+}
+
+.explore .contanier .category {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px 20px;
+}
+
+.explore .contanier .category .content {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.explore .contanier .category .content:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    transform: all .2s;
+}
+
+.explore .contanier .category .content:hover h3 a,
+.explore .contanier .category .content:hover p,
+.explore .contanier .category .content:hover svg {
+    color: var(--white);
+    fill: var(--white);
+    transition: all .2s;
+}
+
+.explore .contanier .category .content h3 a {
+    font-size: 30px;
+    color: var(--black);
+}
+
+.explore .contanier .category .content p {
+    color: #7a7c8d;
+}
+
+.explore .contanier .category svg {
+    width: 60px;
+    fill: var(--blue);
+}
+
+.explore .contanier .category svg .st2,
+.explore .contanier .category svg .st5 {
+    fill: #ffb31f;
+}
+
+/* section explore end  */
+
+/* section ad start  */
+.ad .contanier {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 150px;
+}
+
+.ad .contanier .box {
+    padding: 50px;
+    display: flex;
+    border-radius: 15px;
+}
+
+.ad .contanier .box:first-of-type {
+    background-image: url(../images/banner-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ad .contanier .box:last-of-type {
+    background-image: url(../images/banner-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ad .contanier .box div {
+    flex-basis: 60%;
+}
+
+.ad .contanier .box div span {
+    background-color: var(--red);
+    color: var(--white);
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.ad .contanier .box div h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ad .contanier .box div a {
+    display: block;
+    font-size: 13px;
+    background-color: var(--blue);
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.ad .contanier .box img {
+    width: 40%;
+    height: 100%;
+}
+
+/* section ad end  */
+
+/* section find start  */
+.find {
+    background-color: var(--grey);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.card:hover a:first-of-type image {
+    transform: scale(1.2);
+}
+
+.find .contanier h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.find .contanier h1 span {
+    background-image: url(../images/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    z-index: 1000;
+    background-size: 0% 0%;
+    animation: text-image 3s ease-in-out infinite;
+}
+
+.find .contanier div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.find .contanier div p {
+    color: var(--text);
+}
+
+.find .contanier div ul {
+    display: flex;
+    gap: 25px;
+}
+
+.find .contanier div ul li span {
+    cursor: pointer;
+    color: var(--text);
+}
+
+.find .contanier div ul li span:hover {
+    color: var(--blue);
+}
+
+.find .contanier .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.find .contanier .cards .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--white);
+    overflow: hidden;
+    position: relative;
+}
+
+.find .contanier .cards .card .type {
+    position: absolute;
+    top: 5px;
+    padding: 10px;
+}
+
+.find .contanier .cards .card .type span {
+    margin: 5px;
+    background-color: var(--red);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--white);
+}
+
+.find .contanier .cards .card .type span:first-of-type {
+
+    background-color: var(--blue);
+
+}
+
+.find .contanier .cards .card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.find .contanier .cards .card img:hover {
+    transform: sca;
+}
+
+.find .contanier .cards .card div:first-of-type {
+    padding: 0 20px;
+    color: var(--text);
+    margin-top: 10px;
+}
+
+.find .contanier .cards .card div:first-of-type span:last-of-type i {
+    color: #ffb31f;
+}
+
+.find .contanier .cards .card>a:last-of-type {
+    margin-top: 10px;
+    padding: 0 20px;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.find .contanier .cards .card div:nth-of-type(2) {
+    padding: 0 20px;
+    margin-top: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.find .contanier .cards .card div:nth-of-type(2) img {
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.find .contanier .cards .card div:nth-of-type(3) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.find .contanier .cards .card div:nth-of-type(3) h2 {
+    color: var(--blue);
+}
+
+.find .contanier .cards .card div:nth-of-type(3) a {
+    color: var(--text);
+}
+
+.find .contanier .cards .card div:nth-of-type(3) a:hover {
+    color: var(--blue);
+}
+
+.find .contanier .cards .card a:not(:first-of-type):hover {
+    color: var(--blue);
+}
+
+/* section find end  */
+
+
+
+/* section event start  */
+.event {
+    text-align: center;
+    background-color: var(--white);
+    padding-top: 70px;
+    background-image: url(../images/events-shape.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    margin-bottom: 150px;
+}
+
+.event h1,
+.price h1 {
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+
+.event h1 span,
+.price h1 span {
+    background-image: url(../images/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    z-index: 1000;
+    background-size: 0% 0%;
+    animation: text-image 3s ease-in-out infinite;
+}
+
+.event>p,
+.price>p {
+    color: var(--text);
+    margin-bottom: 100px;
+}
+
+.event .contanier .card {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    background-color: white;
+    border-radius: 18px;
+    padding: 50px;
+    box-shadow: 4px 4px 10px rgb(242, 242, 242), -4px -4px 10px rgb(242, 242, 242);
+    margin-bottom: 10px;
+}
+
+.event .contanier .card:hover {
+    border-left: 5px solid var(--blue);
+}
+
+.event .contanier .card .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event .contanier .card .content p {
+    color: rgb(136, 136, 136);
+    margin-bottom: 15px;
+}
+
+.event .contanier .card .content h2:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* section event end  */
+
+/* section price start  */
+.price {
+    text-align: center;
+}
+
+.price>a {
+    background-color: var(--blue);
+    padding: 20px;
+    color: var(--white);
+    border-radius: 10px 0 0 10px;
+}
+
+.price>a:nth-of-type(2) {
+    border-radius: 0 10px 10px 0;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid #ddd;
+    margin-left: -6px;
+}
+
+.price .contanier {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.price .contanier .card {
+    background-color: #f3f4f8;
+    border-radius: 10px;
+    text-align: start;
+    padding: 40px;
+    position: relative;
+}
+
+.price .card p {
+    margin-top: 25px;
+    color: var(--text);
+}
+
+.price .card p span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.price .card p:nth-of-type(2) {
+    margin-bottom: 25px;
+}
+
+.price .card ul {
+    margin-top: 25px;
+}
+
+.price .card ul li {
+    margin-top: 15px;
+}
+
+.price .card ul li i {
+    margin-right: 10px;
+    color: #dfece2;
+}
+
+.price .card ul li:hover {
+    color: #30a820;
+    transition: all .5s;
+}
+
+.price .card ul li:hover i {
+    color: #30a820;
+    transition: all .5s;
+}
+
+.price .card a {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    width: fit-content;
+    color: var(--text);
+    border: 2px solid #ddd;
+    transition: all .5s;
+}
+
+.price .card a:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.price .contanier .card:nth-of-type(2)::before {
+    content: "Best Value";
+    background-color: #f2277e;
+    color: var(--white);
+    position: absolute;
+    left: 87%;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* section price end  */
+
+/* footer start  */
+footer {
+    background-color: #0e1133;
+    color: var(--white);
+    padding-top: 150px;
+    margin-top: 200px;
+    position: relative;
+}
+
+footer section {
+    position: absolute;
+    top: -72px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 60px;
+    width: 70%;
+    background-color: #2b4eff;
+    border-radius: 10px;
+    background-image: url(../images/cta-shape.png);
+    background-repeat: no-repeat;
+    background-position: 130% 90%;
+
+}
+
+footer section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section div p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer section div a {
+    color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all .5s;
+}
+
+footer section div a:hover {
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 5px 5px 50px #ddd;
+}
+
+footer .contanier {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+footer .contanier div {
+    padding: 20px;
+}
+
+footer .contanier div:first-of-type img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+footer .contanier div:first-of-type p {
+    color: #a1a2ab;
+}
+
+footer .contanier div:first-of-type .links {
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+footer .contanier div:first-of-type .links i {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 15px;
+    transition: border .1s, color 1s;
+}
+
+footer .contanier div:first-of-type .links i:first-of-type {
+    background-color: #285da1;
+}
+
+footer .contanier div:first-of-type .links i:first-of-type:hover {
+    background-color: transparent;
+    color: #285da1;
+    border: 2px solid #285da1;
+}
+
+footer .contanier div:first-of-type .links i:nth-of-type(2) {
+    background-color: #03a9f4;
+}
+
+footer .contanier div:first-of-type .links i:nth-of-type(2):hover {
+    background-color: transparent;
+    color: #03a9f4;
+    border: 2px solid #03a9f4;
+}
+
+footer .contanier div:first-of-type .links i:nth-of-type(3) {
+    background-color: #d2173f;
+}
+
+footer .contanier div:first-of-type .links i:nth-of-type(3):hover {
+    background-color: transparent;
+    color: #d2173f;
+    border: 2px solid #d2173f;
+}
+
+footer .contanier div:nth-of-type(2) li,
+footer .contanier div:nth-of-type(3) li {
+    cursor: pointer;
+    color: #a1a2ab;
+    margin-top: 15px;
+    transition: all .5s;
+}
+
+footer .contanier div:nth-of-type(2) li:hover,
+footer .contanier div:nth-of-type(3) li:hover {
+    color: var(--white);
+}
+
+footer .contanier div:nth-of-type(4) form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+footer .contanier div:nth-of-type(4) form input:first-of-type {
+    outline: none;
+    width: 75%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #ddd;
+}
+
+footer .contanier div:nth-of-type(4) form input:nth-of-type(2) {
+    outline: none;
+    width: 25%;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+}
+
+footer .contanier div:nth-of-type(4) p {
+    color: #a1a2ab;
+}
+
+footer hr {
+    background-color: #a1a2ab;
+    color: #a1a2ab;
+}
+
+footer>p {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    color: #a1a2ab;
+}
+
+footer>p span {
+    color: var(--blue);
+}
+
+/* footer end  */
+
+
+/* animation start */
+@keyframes move-up-down1 {
+    0% {
+        transform: translateY(40px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+
+    }
+}
+
+@keyframes move-up-down2 {
+    0% {
+        transform: translateY(40px);
+    }
+
+    60% {
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+
+    }
+}
+
+@keyframes text-image {
+    0% {
+        background-size: 0% 0%;
+    }
+
+    20% {
+        background-size: 100% 30%;
+    }
+
+    50% {
+        background-size: 100% 30%;
+    }
+
+    100% {
+        background-size: 100% 30%;
+    }
+}
+
+/* animation  */
+
+.contanier {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media (max-width:767px) {
+    .home {
+        height: 115vh;
+    }
+
+    .home .contanier {
+        gap: 40px;
+    }
+
+    .explore .contanier .ex {
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .find .contanier div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .event .contanier .card .content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+
+    footer section {
+        padding: 30px;
+        top: -135px;
+    }
+
+    footer section div {
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    header .contanier .links {
+        display: none;
+    }
+}
+
+
+@media (min-width:768px) {
+    .contanier {
+        width: 750px;
+    }
+
+    .home {
+        height: 115vh;
+    }
+
+    .home .contanier {
+        gap: 40px;
+    }
+
+    .find .contanier div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+}
+
+@media (min-width:992px) {
+    .contanier {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .contanier {
+        width: 1170px;
+    }
+}
+
+.modal {
+    background-color: var(--white);
+    width: 30%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    padding-right: 10px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+}
+
+.modal i {
+    font-size: 40px;
+    color: var(--blue);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.modal a {
+    color: var(--text);
+}
+
+.modal a:hover {
+    color: var(--blue);
+}
