@@ -872,6 +872,7 @@ footer .contanier div:first-of-type .links i {
     border-radius: 6px;
     padding: 15px;
     transition: border .1s, color 1s;
+    overflow: hidden;
 }
 
 footer .contanier div:first-of-type .links i:first-of-type {
