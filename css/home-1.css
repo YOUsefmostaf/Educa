@@ -5,6 +5,8 @@
     transition: all .5s ease;
     list-style: none;
     scroll-behavior: smooth;
+    word-break: break-all;
+    overflow-x: hidden;
 }
 
 :root {
@@ -25,6 +27,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     position: relative;
+
 }
 
 
@@ -185,6 +188,7 @@ header .contanier nav div ul li a {
 .home .contanier {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    overflow: visible;
 }
 
 .home .contanier .text h2 {
@@ -232,12 +236,14 @@ header .contanier nav div ul li a {
     display: flex;
     height: 400px;
     position: relative;
+    overflow: visible;
 }
 
 .home .contanier .photos .left {
     flex-basis: 70%;
     height: 100%;
     position: relative;
+    overflow: visible;
 }
 
 .home .contanier .photos .left img:first-of-type {
@@ -259,6 +265,7 @@ header .contanier nav div ul li a {
 .home .contanier .photos .right {
     flex-basis: 30%;
     position: relative;
+    overflow: visible;
 }
 
 .home .contanier .photos .right img:first-of-type {
@@ -401,7 +408,7 @@ header .contanier nav div ul li a {
 /* section ad start  */
 .ad .contanier {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 150px;
 }
@@ -700,7 +707,7 @@ header .contanier nav div ul li a {
 
 .price .contanier {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     margin-top: 100px;
 }
@@ -787,6 +794,7 @@ footer {
     padding-top: 150px;
     margin-top: 200px;
     position: relative;
+    overflow: visible;
 }
 
 footer section {
@@ -1029,6 +1037,38 @@ footer>p span {
     margin-right: auto;
 }
 
+.modal {
+    background-color: var(--white);
+    width: 30%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    padding-right: 10px;
+    z-index: 1000;
+    transform: translatey(-100%);
+    transition: all .5s ease-in-out;
+}
+
+.modal i {
+    font-size: 40px;
+    color: var(--blue);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.modal a {
+    color: var(--text);
+}
+
+.modal a:hover {
+    color: var(--blue);
+}
+
 
 
 @media (max-width:767px) {
@@ -1075,6 +1115,32 @@ footer>p span {
     header .contanier .links {
         display: none;
     }
+
+    .modal {
+        width: 50%;
+    }
+
+    .home .contanier .text h1 {
+        font-size: 30px;
+        word-wrap: break-word;
+    }
+    
+    .home .contanier .text h1 span {
+        background-image: url(../images/yellow-bg.png);
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        z-index: 1000;
+        background-size: 0% 0%;
+        animation: text-image 3s ease-in-out infinite;
+    }
+    
+    .home .contanier .text p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .home .contanier .photos .text {
+        margin-left: -100px;
+    }
 }
 
 
@@ -1096,6 +1162,16 @@ footer>p span {
         gap: 20px;
     }
 
+    .modal {
+        width: 50%;
+    }
+    .menu {
+        display: block;
+    }
+
+    header .contanier .links {
+        display: none;
+    }
 
 }
 
@@ -1103,42 +1179,17 @@ footer>p span {
     .contanier {
         width: 970px;
     }
+    .menu {
+        display: none;
+    }
+
+    header .contanier .links {
+        display: flex;
+    }
 }
 
 @media (min-width:1200px) {
     .contanier {
         width: 1170px;
     }
-}
-
-.modal {
-    background-color: var(--white);
-    width: 30%;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 50px;
-    padding-right: 10px;
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: all 1s ease-in-out;
-}
-
-.modal i {
-    font-size: 40px;
-    color: var(--blue);
-    align-self: flex-end;
-    cursor: pointer;
-}
-
-.modal a {
-    color: var(--text);
-}
-
-.modal a:hover {
-    color: var(--blue);
 }
