@@ -1,2 +1,0 @@
-# Educa
- Education Website
