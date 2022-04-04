@@ -67,11 +67,11 @@ document.getElementById("finance").onclick = function () {
     
   }
 };
-document.getElementById("menu").onclick = function(){
-  console.log("click ")
-  document.getElementById("modal").style.transform = "translateX(0%)"
-}
 document.getElementById("close").onclick = function(){
-  console.log("c")
-  document.getElementById("modal").style.transform = "translateX(100%)"
+
+  document.getElementById("modal").style.transform = "translateY(-100%)"
+}
+document.getElementById("menu").onclick = function(){
+
+  document.getElementById("modal").style.transform = "translateY(0%)"
 }
