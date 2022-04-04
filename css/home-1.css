@@ -39,6 +39,7 @@ header {
     width: 100%;
     height: 100px;
     z-index: 1000;
+    overflow: visible;
 }
 
 header .contanier {
@@ -85,12 +86,14 @@ header .contanier .links {
     height: 100%;
     display: flex;
     align-items: center;
+
 }
 
 header .contanier nav {
     height: 100%;
     display: flex;
     align-items: center;
+
 }
 
 header .contanier nav div {
@@ -98,6 +101,7 @@ header .contanier nav div {
     display: flex;
     align-items: center;
     margin-right: 40px;
+
 }
 
 header .contanier nav div a {
@@ -871,9 +875,8 @@ footer .contanier div:first-of-type .links i {
     cursor: pointer;
     border-radius: 6px;
     padding: 15px;
-    overflow: hidden;
     transition: border .1s, color 1s;
-    
+    overflow: hidden;
 }
 
 footer .contanier div:first-of-type .links i:first-of-type {
