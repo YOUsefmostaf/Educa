@@ -1172,6 +1172,12 @@ footer>p span {
     header .contanier .links {
         display: none;
     }
+    .ad .contanier {
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+    .price .contanier {
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
 
 }
 
